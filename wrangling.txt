@@ -1,11 +1,27 @@
-//Windows PowerShell Commands
-gc -totalcount 1 -encoding utf8 tt.basic.tsv | set-content -encoding utf8 tt.basics.txt
-gc -encoding utf8 tt.basic.tsv | sls -pattern '\tmovie\t' | add-content -encoding utf8 tt.basics.txt
+# processing title.basics.tsv.gz
 
+//Windows PowerShell commands
+gc -totalcount 1 -encoding utf8 data.tsv | set-content -encoding utf8 tt.basics.txt
+gc -encoding utf8 data.tsv | sls -pattern '\tmovie\t' | add-content -encoding utf8 tt.basics.txt
 
-//r-codes
-read.table(file = 'tt.basics.txt', encoding = 'UTF-8', sep = '\t', header = TRUE, stringsAsFactors = FALSE, quote = '', comment.char = '', strip.white = TRUE, na.strings = c('','\\N'))
+//R codes
+b<-read.table(file = 'tt.basics.txt', encoding = 'UTF-8', sep = '\t', header = TRUE, stringsAsFactors = FALSE, quote = '', comment.char = '', strip.white = TRUE, na.strings = c('','\\N'))
 summary(b)
 b<-b[,-c(2,4,7)]
 sum(complete.cases(b))
 write.table(b,file="basics.tsv",quote=FALSE,row.names = FALSE,sep='\t')
+
+
+# processing name.basics.tsv.gz
+
+//Windows PowerShell commands
+gc -totalcount 1 -encoding utf8 data.tsv | set-content -encoding utf8 names.txt
+gc -encoding utf8 data.tsv | sls -pattern '\t[12][09][^23][0-9]\t\\N\t' | add-content -encoding utf8 names.txt
+
+//R codes
+a<-read.table(file = 'names.txt', encoding = 'UTF-8', sep = '\t', header = TRUE, stringsAsFactors = FALSE, quote = '', comment.char = '', strip.white = TRUE, na.strings = c('','\\N'))
+summary(a)
+a[is.na(a$birthYear),]
+a<-a[c(-234037,-238335),]
+a<-a[,-4]
+write.table(a,file="names.tsv",quote=FALSE,row.names = FALSE,sep='\t')
