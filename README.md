@@ -4,9 +4,9 @@ I put the processed data files in the Data folder. I will keep uploading new dat
 
 To make our project relevant, we only use movie that was produced between 1997 and 2017.
 
-Our starting point is the "97to17.basics.jmp" file. You can join it with other datasets by the 'tconst' column.
+Our starting point is the *97to17.basics.jmp* file. You can join it with other datasets by the 'tconst' column.
 
-Please write about your models in the "models.docx" file. Please check it to find out what you should write in it.
+Please write about your models in the *models.docx* file. Please check it to find out what you should write in it.
 
 You can use any technique for your analysis. Please upload the relevant files.
 
@@ -35,5 +35,5 @@ List of files in this repository
       Don't down load this file from IMDb. It is supposed to be renewed daily but we need consistency in our project.
 
 =======================================================
-Update Log
-4/12/2018 Start of the project
+## Update Log
+* 4/12/2018 Start of the project
