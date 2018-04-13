@@ -2,7 +2,7 @@
 
 I put the processed data files in the Data folder. I will keep uploading new data files and write about the updates at the end of this file. You are also welcome to share your processed data and write about them in the Update section.
 
-To make our project relevant, we only use movie that was produced between 1997 and 2017.
+To make our project relevant, we only use movies that were produced between 1997 and 2017.
 
 Our starting point is the *97to17.basics.jmp* file. You can join it with other datasets by the 'tconst' column.
 
@@ -33,7 +33,6 @@ List of files in this repository
       You may use it if you want to include earlier and later movies in your analysis.
     5. Data\title.ratings.tsv.gz
       Don't down load this file from IMDb. It is supposed to be renewed daily but we need consistency in our project.
-
-=======================================================
+      
 ## Update Log
 * 4/12/2018 Start of the project
