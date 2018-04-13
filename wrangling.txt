@@ -1,5 +1,6 @@
 //Windows PowerShell Commands
-gc -encoding utf8 tt.basic.tsv | sls -pattern '\tmovie\t' | set-content -encoding utf8 tt.basics.txt
+gc -totalcount 1 -encoding utf8 tt.basic.tsv | set-content -encoding utf8 tt.basics.txt
+gc -encoding utf8 tt.basic.tsv | sls -pattern '\tmovie\t' | add-content -encoding utf8 tt.basics.txt
 
 
 //r-codes
