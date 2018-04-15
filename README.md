@@ -16,9 +16,9 @@ You can use any technique for your analysis. Please upload the relevant files.
 ### Original files you may download from https://www.imdb.com/interfaces/
 
     1. title.akas.tsv.gz
-    2. title.crew.tsv.gz
-    3. title.principals.tsv.gz
-	4. title.basics.tsv.gz (processed)
+    2. title.principals.tsv.gz
+	3. title.basics.tsv.gz (processed)
+	4. title.crew.tsv.gz (processed)
 	5. name.basics.tsv.gz (processed)
 
   * Please don't use other files. We need consistency in our project.
@@ -33,18 +33,24 @@ You can use any technique for your analysis. Please upload the relevant files.
     3. wrangling.txt
       Commands and codes I used to process the original data files. It may be helpful when you want to process files.
       I used Windows PowerShell commands and R codes.
-	4. Data\names.zip
+	4. tts.txt
+	  The regular expression for extracing movie records from datasets. I used it to reduce 
+	5. Data\names.zip
 	  A processed "name.basics.tsv.gz" file. It contains people who is supposed to be alive and below 79 years old.
 	  People whose birth year is unknown were also excluded. Let me know if you think we missed important people.
+    6. Data\crew.zip
+	  A processed "title.crew.tsv.gz" file. It contains the directors and writers of each moive.
+	
+    * Data\archives\
+	  You may use the files in this folder if you want to include earlier and later movies in your analysis.
     
-    * You may use the following files if you want to include earlier and later movies in your analysis.
-    
-    1. Data\tt.basics.zip
-      All the movie records from the "title.basics.tsv.gz" file.
-    2. Data\title.ratings.tsv.gz
-      Don't download this file from IMDb. Download it from this repository if you need it.
-      IMDb is supposed to renew this file daily but we need consistency in our project.
+      1. Data\archives\tt.basics.zip
+		All the movie records from the "title.basics.tsv.gz" file.
+      2. Data\title.ratings.tsv.gz
+		Don't download this file from IMDb. Download it from this repository if you need it.
+		IMDb is supposed to renew this file daily but we need consistency in our project.
       
 ## Update Log
 * 4/12/2018 start of the project
-* 4/13/2018 uploaded Data\names.zip
+* 4/13/2018 uploaded Data\names.zip; updated wrangling.txt
+* 4/15/2018 uploaded tts.txt and Data\crew.zip; updated wrangling.txt

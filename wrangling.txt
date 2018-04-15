@@ -23,5 +23,16 @@ a<-read.table(file = 'names.txt', encoding = 'UTF-8', sep = '\t', header = TRUE,
 summary(a)
 a[is.na(a$birthYear),]
 a<-a[c(-234037,-238335),]
+a<-a[(2018-a$birthYear)<79,]
 a<-a[,-4]
 write.table(a,file="names.tsv",quote=FALSE,row.names = FALSE,sep='\t')
+
+
+# processing title.crew.tsv.gz
+
+//Windows PowerShell commands
+gc -totalcount 1 -encoding utf8 data.tsv | set-content -encoding utf8 crew.txt
+gc -encoding utf8 data.tsv | sls -pattern '^\S+\t\\N\t\\N' -NotMatch | add-content -encoding utf8 crew.txt
+gc -totalcount 1 -encoding utf8 crew.txt | set-content -encoding utf8 crew.tsv
+$ids=gc -encoding utf8 tts.txt
+gc -encoding utf8 crew.txt | sls -pattern $ids | add-content -encoding utf8 crew.tsv
