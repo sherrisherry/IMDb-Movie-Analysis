@@ -34,7 +34,7 @@ You can use any technique for your analysis. Please upload the relevant files.
       Commands and codes I used to process the original data files. It may be helpful when you want to process files.
       I used Windows PowerShell commands and R codes.
 	4. tts.txt
-	  The regular expression for extracing movie records from datasets. I used it to reduce 
+	  The regular expression for extracing movie records from datasets. I used it to reduce "title.crew.tsv.gz".
 	5. Data\names.zip
 	  A processed "name.basics.tsv.gz" file. It contains people who is supposed to be alive and below 79 years old.
 	  People whose birth year is unknown were also excluded. Let me know if you think we missed important people.
@@ -46,7 +46,7 @@ You can use any technique for your analysis. Please upload the relevant files.
     
       1. Data\archives\tt.basics.zip
 		All the movie records from the "title.basics.tsv.gz" file.
-      2. Data\title.ratings.tsv.gz
+      2. Data\archives\title.ratings.tsv.gz
 		Don't download this file from IMDb. Download it from this repository if you need it.
 		IMDb is supposed to renew this file daily but we need consistency in our project.
       
