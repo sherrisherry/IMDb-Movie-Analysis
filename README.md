@@ -34,12 +34,12 @@ You can use any technique for your analysis. Please upload the relevant files.
       Commands and codes I used to process the original data files. It may be helpful when you want to process files.
       I used Windows PowerShell commands and R codes.
 	4. tts.txt
-	  The regular expression for extracing movie records from datasets. I used it to reduce "title.crew.tsv.gz".
+	  The regular expression for extracting movie records from datasets. I used it to reduce "title.crew.tsv.gz".
 	5. Data\names.zip
 	  A processed "name.basics.tsv.gz" file. It contains people who is supposed to be alive and below 79 years old.
 	  People whose birth year is unknown were also excluded. Let me know if you think we missed important people.
     6. Data\crew.zip
-	  A processed "title.crew.tsv.gz" file. It contains the directors and writers of each moive.
+	  A processed "title.crew.tsv.gz" file. It contains the directors and writers of each movie.
 	
     * Data\archives\
 	  You may use the files in this folder if you want to include earlier and later movies in your analysis.
